@@ -169,7 +169,7 @@ import {
   async function logAllSlabs(){
     const slabsID = await ifcLoader.ifcManager.getAllItemsOfType(modelID, IFCSLAB);
 
-    for(let i = 0; i <= slabsID.length; i++) {
+    for(let i = 0; i < slabsID.length; i++) {
         const slabID = slabsID[i];
         const slabProperties = await ifcLoader.ifcManager.getItemProperties(0, slabID);
         console.log(slabProperties);

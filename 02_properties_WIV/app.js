@@ -15,5 +15,15 @@ async function Load(){
     viewer.context.renderer.postProduction.active = true;
 }
 
-window.ondblclick = () => viewer.IFC.selector.pickIfcItem();
+// window.ondblclick = () => viewer.IFC.selector.pickIfcItem();
+
+window.ondblclick = async () => {
+    const result = await viewer.IFC.selector.highlightIfcItem();
+    if (!result) return;
+    const { modelID, id } = result;
+    const props = await viewer.IFC.getProperties(modelID, id, true, false);
+    console.log(props);
+};
+
+
 window.onmousemove = () => viewer.IFC.selector.prePickIfcItem();
