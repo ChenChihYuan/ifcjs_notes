@@ -1,0 +1,22 @@
+{
+  "name": "helloworld_wiv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "rollup": "^2.77.1"
+  },
+  "dependencies": {
+    "dexie": "^3.2.2",
+    "three": "^0.135.0",
+    "web-ifc-viewer": "^1.0.207"
+  }
+}
